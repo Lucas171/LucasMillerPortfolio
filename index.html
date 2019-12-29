@@ -1,0 +1,669 @@
+<html lang="en">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153604210-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-153604210-1');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Lucas Miller</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/5c6ae1e82b.js" crossorigin="anonymous"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Arbutus+Slab&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arbutus Slab', serif;
+
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* navigation */
+    nav {
+      width: 100%;
+      display: flex;
+    }
+
+    .myWork li a {
+      color: black;
+      text-decoration: none;
+    }
+
+    nav h1 {
+      display: inline-block;
+    }
+
+    .hideOnMobile {
+      display: none;
+    }
+
+    /* Main section */
+    .mainSection {
+      width: 100%;
+      text-align: center;
+      margin: 20em 0;
+    }
+
+
+
+    img {
+      /* max-width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: -1;
+  height: 50em;
+  left: 0;
+  width: 80% */
+    }
+
+    .mainSection button,
+    .aboutMe button {
+      width: 25%;
+      border-radius: 20px;
+      background-color: #93BA65;
+      color: white;
+      padding: 10px 5px;
+      transition: .5s;
+    }
+
+    .mainSection div.layer button:nth-child(3) {
+      margin-right: 35px;
+      margin-top: 10px;
+    }
+
+    .mainSection button:hover,
+    .aboutMe button:hover {
+      background-color: #51633c;
+    }
+
+    i.chevron {
+      padding-top: 110px;
+      animation: bounce 1s infinite alternate;
+    }
+
+    @keyframes bounce {
+      to {
+        transform: translateY(0px);
+      }
+
+      from {
+        transform: translateY(20px);
+      }
+    }
+
+    /* What i do section (services) */
+    .services {
+      text-align: center;
+      margin: auto;
+      width: 80%;
+    }
+
+    .services h1 {
+      margin-bottom: 50px;
+    }
+
+    .services li {
+      border-bottom: 1px solid #F0F0F0;
+      list-style-type: none;
+    }
+
+    .services ul li {
+      display: flex;
+      margin: 20px 0;
+      text-align: left;
+      padding: 20px;
+      transition: .5s
+    }
+
+    .services ul li:hover {
+      box-shadow: 0px 0px 18px #E6E6E6;
+    }
+
+    .services ul li div {
+      margin-left: 20px;
+    }
+
+    i {
+      color: #93BA65;
+    }
+
+    /* ABOUT ME SECTION  */
+    .aboutMe {
+      width: 90%;
+      margin: auto;
+      margin-top: 200px;
+    }
+
+    .aboutMe hr {
+      width: 100px;
+      border: 1px solid black;
+      margin-bottom: 70px;
+    }
+
+    img.photoOfMe {
+      display: block;
+      margin: 25px auto 45px;
+      width: 50%;
+      height: 400px;
+    }
+
+    .aboutMe button {
+      margin-top: 20px;
+    }
+
+    /* MY WORK SECTION */
+    .myWork {
+      margin: 20px auto;
+      width: 90%;
+    }
+
+    .myWork h1 {
+      margin-top: 90px;
+    }
+
+    .myWork hr {
+      width: 20%;
+      border: 1px solid black;
+      margin-bottom: 90px;
+    }
+
+    .myWork img {
+      display: block;
+      margin: 25px auto;
+      width: 50%;
+      height: auto;
+      transition: 1s
+    }
+
+    .myWork li:hover {
+      box-shadow: 0 0 18px gray
+    }
+
+    .myWork ul li {
+      list-style-type: none;
+      transition: .5s;
+      text-align: center;
+      padding: 20px;
+      margin: 10px;
+    }
+
+    /* CONTACT ME SECTION */
+    .contact {
+      width: 80%;
+      margin: 20px auto;
+    }
+
+    .contact h1 {
+      margin-top: 60px;
+    }
+
+    .contact hr {
+      width: 20%;
+      border: 1px solid black;
+      margin-bottom: 90px;
+    }
+
+    .contact form input:nth-child(1),
+    .contact form input:nth-child(2) {
+      width: 45%;
+      border: none;
+      border-bottom: 1px solid lightgrey;
+      margin-bottom: 20px;
+      padding: 10px 0;
+    }
+
+    .contact form input:nth-child(2) {
+      margin-left: 30px;
+    }
+
+    .contact form input:nth-child(3) {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid lightgrey;
+      margin-bottom: 20px;
+      padding: 10px 0;
+    }
+
+    .contact form input:nth-child(4) {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid lightgrey;
+      margin-bottom: 20px;
+      padding: 10px 0;
+    }
+
+    .contact button {
+      width: 40%;
+      border-radius: 20px;
+      background-color: #93BA65;
+      color: white;
+      padding: 10px 5px;
+      transition: .5s;
+      margin: 25px 0;
+    }
+
+    .contact button:hover {
+      background-color: #51633c;
+    }
+
+    textarea {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid lightgrey;
+      margin-bottom: 20px;
+      padding: 10px 0;
+    }
+
+    /* footer */
+    footer {
+      width: 100%;
+      margin: auto;
+      background-color: black;
+    }
+
+    footer ul {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+    }
+
+    footer ul li {
+      list-style-type: none;
+    }
+
+    footer i {
+      color: white;
+      transition: .5s;
+      padding: 20px;
+    }
+
+    footer li:hover {
+      color: #93BA65;
+      animation: bounce2 .2s infinite alternate;
+    }
+
+    footer i:hover {
+      color: #93BA65;
+    }
+
+    @keyframes bounce2 {
+      to {
+        transform: translateY(-5px);
+      }
+
+      from {
+        transform: translateY(0px);
+      }
+    }
+
+    @media only screen and (min-width: 650px) {
+      .mainSection div.layer button:nth-child(4) {
+        display: none;
+      }
+
+      .mainSection div.layer button:nth-child(3) {
+        width: 30%;
+        margin-left: 0px;
+      }
+
+      /* .mainSection {
+    width: 80%;
+    margin: 250px auto;
+
+  }
+  .mainSection h1{
+    font-size: 4em;
+    text-align: left;
+  }
+
+  .mainSection p{
+    text-align: left;
+
+  }
+
+.mainSection {
+  text-align: left;
+} */
+
+      .mainSection i {
+        text-align: center;
+      }
+
+      .floatingIcon {
+        width: 100%;
+        text-align: center;
+      }
+
+      .aboutMe img {
+        float: right;
+        margin-top: auto;
+        width: 40%;
+      }
+
+      .myWork h1 {
+        margin-top: 400px;
+      }
+
+      .aboutMe p {
+        padding-top: 40px;
+      }
+
+      .aboutMe img {
+        margin-left: 40px;
+      }
+
+      .myWork,
+      .aboutMe {
+        width: 70%;
+      }
+
+      .contact button {
+        width: 25%;
+
+      }
+    }
+
+    @media only screen and (min-width: 995px) {
+      .mainSection div.layer button:nth-child(3) {
+        width: 20%;
+        margin-left: 40px;
+      }
+
+      .contact {
+        width: 70%;
+        margin: 0 auto;
+      }
+
+      .myWork ul {
+        display: flex;
+      }
+
+      .myWork,
+      .aboutMe {
+        width: 70%;
+      }
+
+
+
+      .myWork ul li {
+        padding: 0;
+
+      }
+
+      .aboutMe img {
+        width: 200px;
+
+      }
+
+      .aboutMe p {
+        padding-top: 80px;
+        margin-right: 300px;
+      }
+
+      .contact {
+        margin-top: 200px;
+      }
+
+      .myWork {
+        margin-top: 300px;
+      }
+    }
+
+    @media only screen and (max-width: 400px) {
+      .contact button {
+        width: 50%;
+
+      }
+
+      .contact form input:nth-child(1),
+      .contact form input:nth-child(2) {
+        width: 40%;
+        border: none;
+        border-bottom: 1px solid lightgrey;
+        margin-bottom: 20px;
+        padding: 10px 0;
+      }
+
+      .aboutMe button {
+        width: 50%;
+      }
+
+      .mainSection div.layer button:nth-child(3),
+      .mainSection div.layer button:nth-child(4) {
+        display: none;
+
+
+      }
+
+      .mainSection {
+        width: 80%;
+        margin: 250px auto;
+
+      }
+
+      .mainSection h1 {
+        font-size: 2em
+      }
+
+    }
+  </style>
+</head>
+
+<body style="background-color: light" id="home">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color:white;">
+    <a class="navbar-brand" href="#">Lucas Miller</a>
+    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#services">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+  <section class="mainSection">
+    <div class="layer">
+      <!-- <img src="https://imgur.com/DBUmZNO" alt=""> -->
+      <h1>I'm Lucas Miller</h1>
+      <p>I'm a Full Stack Web Developer Based out of Kansas City, MO</p>
+      <button type="button" name="button" onclick="window.location.href='#projects'">My Work</button>
+      <button type="button" name="button" onclick="window.location.href='#contact'">Contact Me</button> <br>
+      <div class="floatingIcon">
+        <i class="fas fa-chevron-down fa-2x chevron"></i>
+      </div>
+    </div>
+    <span id="services"></span>
+  </section>
+
+
+  <section class="services">
+    <h1>What I Do</h1>
+
+    <ul>
+      <li>
+        <i class="fas fa-code fa-2x"></i>
+        <div>
+
+          <h3>Web Development</h3>
+
+          <br>
+          <h5 style="color: #4D8E34">Languages</h5> <br>
+          <p>HTML</p>
+          <p>CSS</p>
+          <p>Javascript</p>
+          <br>
+          <br>
+          <br>
+          <sub>*Always learning new things</sub>
+
+
+
+
+
+        </div>
+        <div style="margin: 40px 50px 0 20px">
+
+          <br>
+
+          <h5 style="color: #4D8E34">Frameworks</h5> <br>
+          <p>NodeJS</p>
+          <br>
+            <br>
+          <br>
+
+
+
+
+
+
+        </div>
+        <div style="margin: 40px 20px 0 100px">
+
+
+
+          <br>
+          <h5 style="color: #4D8E34">Libraries</h5> <br>
+          <p>JQuery</p>
+          <p>React</p>
+          <br>
+          <br>
+          <br>
+
+
+
+
+
+
+        </div>
+        <div style="margin: 40px 20px 0 100px">
+
+
+
+          <br>
+          <h5 style="color: #4D8E34">Extra Skills</h5> <br>
+          <p>Unix Command Line</p>
+          <p>MongoDB/Mongoose</p>
+          <p>API Interaction</p>
+          <p>Authentication & Security</p>
+          <p>Version Control (Git)</p>
+          <br>
+          <br>
+          <br>
+
+
+
+
+
+
+        </div>
+      </li>
+
+    </ul>
+  </section>
+  <span id="about"></span>
+  <section class="aboutMe">
+    <h1>About Me</h1>
+    <hr>
+    <img src="UNADJUSTEDNONRAW_thumb_20f.jpg" alt="Photo of Lucas Miller" class="photoOfMe">
+    <p>I am a 22-year-old freelance Full Stack Web Developer from Kansas City, MO. I have taught myself how to develop, design, and launch websites/applications for nearly 3 years. I am currently pursuing a bachelor's degree in software engineering.
+      Alongside
+      being a loving husband and serving in the U.S Army. <br><br> I love writing code, building websites and learning new languages, and I'm always looking forward to new projects that come my way. </p>
+    <a href="#contact"><button type="button" name="button">Contact Me</button></a>
+
+  </section>
+  <span id="projects"></span>
+
+  <section class="myWork">
+    <h1>My Work</h1>
+    <hr>
+    <ul>
+      <li>
+        <a href="https://lucas171.github.io/Webhosting/" target="_blank">
+          <img src="project1.png" alt="">
+          <h6>Web Hosting Concept</h6>
+        </a>
+      </li>
+      <li><a href="https://authentication-app21.herokuapp.com/login" target="_blank">
+          <img src="project3.png" alt="">
+          <h6>Authentication Concept</h6>
+        </a>
+      </li>
+      <li><a href="https://codepen.io/Lucas17" target="_blank">
+          <img src="codepen.png" alt="">
+          <h6>Code Pen</h6>
+        </a>
+      </li>
+    </ul>
+  </section>
+  <span id="contact"></span>
+  <section class="contact">
+
+    <h1>Contact Me</h1>
+    <hr>
+    <form method="post" action="mailto:lucasmiller401@gmail.com" enctype="text/plain">
+      <input type="text" placeholder="First Name" required name="firstName">
+      <input type="text" placeholder="Last Name" name="lastName">
+      <input type="email" placeholder="Email Address" required name="emailAddress">
+      <input type="text" placeholder="Subject Of Message" name="messageSubject" required>
+      <textarea name="comments" rows="8" cols="80" placeholder="Type your message here"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <ul>
+      <a href="https://www.facebook.com/lucas.miller.14268" target="_blank">
+        <li><i class="fab fa-facebook-square fa-2x"></i>
+        </li>
+      </a>
+      <a href="https://codepen.io/Lucas17" target="_blank">
+        <li>
+          <i class="fab fa-codepen fa-2x"></i>
+        </li>
+      </a>
+      <a href="mailto:lucasmiller401@gmail.com" target="_blank">
+        <li><i class="fas fa-envelope-square fa-2x"></i>
+        </li>
+      </a>
+    </ul>
+
+  </footer>
+  <!-- BOOTSTRAP PLUGING -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
